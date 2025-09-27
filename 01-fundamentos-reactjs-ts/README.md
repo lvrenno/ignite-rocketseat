@@ -1,75 +1,94 @@
-# React + TypeScript + Vite
+# Social Feed App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A TypeScript and React-based social feed application that demonstrates core React concepts and modern web development practices.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Create and delete comments on posts
+- 👍 Like comments with counter
+- 🎨 Responsive layout with sidebar
+- 👤 User profile with avatar
+- 📱 Mobile-friendly design
 
-## React Compiler
+## Technologies
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React 19
+- TypeScript
+- Vite
+- CSS Modules
+- date-fns for date formatting
+- phosphor-react for icons
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (Latest LTS version recommended)
+- npm or yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To start the development server:
+```bash
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+To create a production build:
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── assets/         # Static assets
+├── components/     # React components
+│   ├── Avatar/     
+│   ├── Comment/    
+│   ├── Header/     
+│   ├── Post/       
+│   └── Sidebar/    
+├── App.tsx         # Main application component
+├── global.css      # Global styles
+└── main.tsx       # Application entry point
+```
+
+## Features in Detail
+
+### Posts
+- Display author information
+- Show publish date with relative time
+- Support for text and link content
+- Comment system with delete functionality
+
+### Comments
+- User avatar display
+- Like counter
+- Delete functionality
+- Responsive design
+
+### Sidebar
+- User profile information
+- Custom avatar component
+- Profile editing button
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
