@@ -4,11 +4,11 @@ A TypeScript and React-based social feed application that demonstrates core Reac
 
 ## Features
 
-- 📝 Create and delete comments on posts
-- 👍 Like comments with counter
-- 🎨 Responsive layout with sidebar
-- 👤 User profile with avatar
-- 📱 Mobile-friendly design
+- Create and delete comments on posts
+- Like comments with counter
+- Responsive layout with sidebar
+- User profile with avatar
+- Mobile-friendly design
 
 ## Technologies
 
